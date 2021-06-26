@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/stylesheet.css">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/stylesheet.css" />
+    <title>Code Quiz</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="high-score">
+          <a href="./highscores.html">View High Score</a>
+        </li>
+        <li id="timer" class="timer"></li>
+      </ul>
+    </nav>
+    <main>
+      <body>
+        <section id="intro" class="intro">
+          <h1>Coding Quiz</h1>
+          <p>Click start to play, if you guess correctly you will receive more time, answer incorrectly and you will lose time. If the clock reaches 0 the game is over.</p>
+          <button id="startButton" class="startButton">Start</button>
+        </section>
+        <br />
+        <section id="quiz" class="quiz">
+          <h2 id="question"></h2>
+          <button id="b1" class="quizB"></button>
+          <button id="b2" class="quizB"></button>
+          <button id="b3" class="quizB"></button>
+          <button id="b4" class="quizB"></button>
+          <p id="wrong" class="wrong"></p>
+        </section>
+      </body>
+    </main>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
-<div id="quiz">
-    <h1 id="quiz-name"></h1>
-    <button id="submit-button">Submit Answers</button>
-    <button id="next-question-button">Next Question</button>
-    <button id="prev-question-button">Previous</button>
-    
-    <div id="quiz-results">
-      
-      <p id="quiz-results-message"></p>
-      <p id="quiz-results-score"></p>
-      <button id="quiz-retry-button">Retry</button>
-      
-    </div>
-  </div>
