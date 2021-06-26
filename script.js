@@ -14,52 +14,52 @@ var quizEl = document.querySelector("#quiz");
 //Questions and Answers
 var questions = [
 	{
-		question: "Who was the first Avenger?",
-		q1: "Capitan America",
-		q2: "Hulk",
-		q3: "Iron Man",
-		q4: "Hawkeye",
-		answer: "Capitan America"
+		question: "What zodiac sign is Jenna?",
+		q1: "Virgo",
+		q2: "Aries",
+		q3: "Pisces",
+		q4: "Leo",
+		answer: "Virgo"
 	},
 	{
-		question: "Who does Bruce Banner turn into when he's angry?",
-		q1: "Abomination",
-		q2: "Hulk",
-		q3: "Hercules",
-		q4: "Sentry",
-		answer: "Hulk"
+		question: "What is the nasty boy's actual name?",
+		q1: "Marbles",
+		q2: "Bunny",
+		q3: "Hermin",
+		q4: "Kermit",
+		answer: "Kermit"
 	},
 	{
-		question: "Who does Galactus use as a henchman?",
-		q1: "Magneto",
-		q2: "Silver Surfer",
-		q3: "Professor X",
-		q4: "Wolverine",
-		answer: "Silver Surfer"
+		question: "Which restaurant makes the best garbage plate (according to Jenna)?",
+		q1: "Nick Tahoe's",
+		q2: "McDonalds",
+		q3: "Henrietta Hots",
+		q4: "Aries Kitchen",
+		answer: "Henrietta Hots"
 	},
 	{
-		question: "Who is Tony Stark?",
-		q1: "Iron Monger",
-		q2: "Whiplash",
-		q3: "War Machine",
-		q4: "Iron Man",
-		answer: "Iron Man"
+		question: "Is Cermet going to grow?",
+		q1: "Yes, with enough water and sunshine",
+		q2: "No, he is full grown",
+		q3: "He was stunted at birth because he would be too powerful if he were full-grown",
+		q4: "No and its all Peach's fault",
+		answer: "No, he is full grown"
 	},
 	{
-		question: "Who wants all the Infinity Stones?",
-		q1: "Thor",
-		q2: "Thanos",
-		q3: "Galactus",
-		q4: "Dr. Strange",
-		answer: "Thanos"
+		question: "Who came up the corn on the cob but instead of the corn bone its a hotdog?",
+		q1: "jasom",
+		q2: "Julen",
+		q3: "Boxd Macncheese",
+		q4: "Debbie",
+		answer: "jasom"
 	},
 	{
-		question: "Who is the coolest?",
-		q1: "Not this one",
-		q2: "Not this one",
-		q3: "Not this one",
-		q4: "Hulk",
-		answer: "Hulk"
+		question: "What was Jenna's New Years resolution in 2019?",
+		q1: "Grow 7 inches",
+		q2: "Make a hot wheels track out of her hair",
+		q3: "rescue a greyhound",
+		q4: "to shave her eyebrows",
+		answer: "Grow 7 inches"
 	}];
 
 //Initial variables
@@ -111,7 +111,7 @@ quizEl.addEventListener("click", function (event) {
 	if (element.matches(".quizB")) {
 		var check = element.innerText;
 		if (check === questions[questionIndex].answer) {
-			secondsLeft = secondsLeft + 5;
+			secondsLeft = secondsLeft + 10;
 			alert("Correct!");
 			wrongEl.textContent = " ";
 			//Run through the questions
@@ -128,8 +128,8 @@ quizEl.addEventListener("click", function (event) {
 				enterHiSc();
 			}
 		} else {
-			secondsLeft = secondsLeft - 5;
-			wrongEl.textContent = "Incorrect -5 seconds";
+			secondsLeft = secondsLeft - 10;
+			wrongEl.textContent = "Incorrect -10 seconds";
 			if (secondsLeft <= 0) {
 				userScore = 0;
 				clearInterval(timeInt);
